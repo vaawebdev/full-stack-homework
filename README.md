@@ -8,7 +8,6 @@ You will build a web application that demonstrates your proficiency in:
 
 - Frontend development with React and Next.js
 - Raw SQL database operations
-- Data visualization
 - Form handling and validation
 
 ## Technical Requirements
@@ -48,65 +47,31 @@ For data fetching and database communication, implement one of these approaches:
 
 Ensure your implementation includes proper error boundaries, loading indicators, and responsive design principles regardless of your chosen approach.
 
-#### Numbers Page
+#### numbers Page
 
-Create a form with the following:
-
-- A number input field that accepts both positive and negative integers
-- A submit button to save the number to the database
-
-Database Schema:
-Table name: "numbers"
-
-- id: number type
-- value: number type
-
-Features:
-
-1. Display a table showing pairs of adjacent numbers with their sums
-3. Auto-refresh table when new numbers are added
-4. Implement proper error handling for database operations
-
-Example table format showing adjacent pairs and their sums:
-
+Form for submitting integers:
+- Include a number input field that accepts both positive and negative integers.
+- On submit, save the value into the numbers table using raw SQL.
+ 
+Display adjacent number pairs:
+- Below the form, show a table of adjacent numbers and their sums.
+- The format should be as follows:
+ 
 | ID 1 | Number 1 | ID 2 | Number 2 | Sum |
 | ---- | -------- | ---- | -------- | --- |
 | 1    | 3        | 2    | 5        | 8   |
 | 2    | 5        | 3    | 7        | 12  |
 | 3    | 7        | 4    | 2        | 9   |
-| 4    | 2        | 5    | -15      | -13 |
-| 5    | -15      | 6    | 44       | 29  |
 
-#### Grades Page
+- Auto-refresh the table when a new number is added.
+ 
+#### grades Page
 
-Create an interactive form with the following requirements:
+Create a form with:
 
-- Class name selection via dropdown menu (restricted to Math, Science, History)
-- Grade input field (numeric, with built-in validation for range 0-100)
-- Submit button
-
-Database Schema:
-Table name: "grades"
-Columns:
-
-- id: number type
-- class: enum type
-- grade: number type
-
-Implementation Requirements:
-
-1. Create a data table displaying:
-    - ID
-   - Class name
-   - Grade
-
-2. Implement filter controls:
-   - "Show All Data" - Displays complete dataset without filtering
-   - "Class Averages" - Calculates and displays average grade per class
-   - "Passing Average" - Shows class averages for grades > 55
-   - "High Performing Classes" - Lists classes with averages > 70
-
-❗ Each filter button should trigger a dedicated SQL query and automatically update the data displayed in the table with the query results
+- A dropdown for class selection with options: Math, Science, and History
+- A numeric grade input field (must be between 0 and 100)
+- A submit button that inserts the entry into the grades table using raw SQL
 
 ## Technical Constraints
 
