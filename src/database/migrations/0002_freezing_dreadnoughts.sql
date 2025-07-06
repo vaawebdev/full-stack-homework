@@ -1,0 +1,2 @@
+CREATE TYPE "public"."subject" AS ENUM('Math', 'Science', 'History');--> statement-breakpoint
+ALTER TABLE "grades" ALTER COLUMN "subject" SET DATA TYPE "public"."subject" USING "subject"::"public"."subject";
